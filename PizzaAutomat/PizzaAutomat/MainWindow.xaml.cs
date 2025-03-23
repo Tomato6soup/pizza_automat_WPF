@@ -20,5 +20,17 @@ namespace PizzaAutomat
         {
             InitializeComponent();
         }
+
+        private void ZamowPizza_Click(object sender, RoutedEventArgs e)
+        {
+            ZamowPizzaWindow zamowPizzaWindow = new ZamowPizzaWindow();
+            zamowPizzaWindow.ShowDialog();
+        }
+
+        private void AdminPanel_Click(object sender, RoutedEventArgs e)
+        {
+            AdminPanelWindow adminPanelWindow = new AdminPanelWindow();
+            adminPanelWindow.ShowDialog();
+        }
     }
 }

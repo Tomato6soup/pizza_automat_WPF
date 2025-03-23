@@ -1,0 +1,11 @@
+﻿<Window x:Class="PizzaAutomat.ZamowPizzaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Zamów Pizzę" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="Wybierz pizzę" FontSize="20" Margin="20"/>
+        <ListBox Name="PizzaList" Margin="20,60,20,100"/>
+
+        <Button Content="Zamów" Width="100" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,20" Click="Zamow_Click"/>
+    </Grid>
+</Window>
