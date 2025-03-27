@@ -1,5 +1,5 @@
 ﻿PizzaAutomat
-1.0.0.0
+
 
 winexe
 C#
@@ -12,7 +12,7 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\App.xaml
 3859973137
 
-9-1473809285
+7-1373280157
 1991659389577
 AdminPanelWindow.xaml;MainWindow.xaml;ZamowPizzaWindow.xaml;
 
