@@ -1,10 +1,6 @@
 D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\PizzaAutomat.csproj.AssemblyReference.cache
-D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\AdminPanelWindow.baml
 D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\MainWindow.baml
-D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\ZamowPizzaWindow.baml
-D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\AdminPanelWindow.g.cs
 D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\MainWindow.g.cs
-D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\ZamowPizzaWindow.g.cs
 D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\App.g.cs
 D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\PizzaAutomat_MarkupCompile.cache
 D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\PizzaAutomat.g.resources
@@ -25,3 +21,9 @@ D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\refi
 D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\PizzaAutomat.pdb
 D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\PizzaAutomat.genruntimeconfig.cache
 D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\ref\PizzaAutomat.dll
+D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\Remove\AdminPanelWindow.baml
+D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\Remove\ZamowPizzaWindow.baml
+D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\Remove\AdminPanelWindow.g.cs
+D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\Remove\ZamowPizzaWindow.g.cs
+D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\PizzaAutomat_MarkupCompile.lref
+D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\App.baml

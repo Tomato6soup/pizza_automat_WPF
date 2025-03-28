@@ -68,7 +68,7 @@ namespace PizzaAutomat {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PizzaAutomat;component/zamowpizzawindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PizzaAutomat;V1.0.0.0;component/zamowpizzawindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ZamowPizzaWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
