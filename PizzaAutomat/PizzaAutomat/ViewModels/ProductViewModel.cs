@@ -41,7 +41,7 @@ namespace PizzaAutomat.ViewModels
         }
 
         //Formatted display message of this product quantity
-        //Ex: "Regular Soda: 7"
+   
         public string InventoryDisplay
         {
             get
