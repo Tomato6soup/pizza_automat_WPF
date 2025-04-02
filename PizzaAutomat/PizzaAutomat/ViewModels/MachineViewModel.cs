@@ -6,6 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+////TO do
+///dac earnings.json plik, aby zapisywalo zarobione pieniendze
+///dodać funkcje "zobaczyc historie zamowien" w history.json pliku dla admina, takze dac refill and empty supply dla admina(pliki z models)
+///
+
 namespace PizzaAutomat.ViewModels
 {
     public class MachineViewModel : ObservableObject
