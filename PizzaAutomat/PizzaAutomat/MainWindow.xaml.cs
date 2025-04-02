@@ -42,12 +42,12 @@ namespace PizzaAutomat
 
         private void Insert50_Clicked(object sender, RoutedEventArgs e)
         {
-            _machine.InsertChange(2.50);
+            _machine.InsertChange(1.50);
         }
 
         private void Insert75_Clicked(object sender, RoutedEventArgs e)
         {
-            _machine.InsertChange(3.75);
+            _machine.InsertChange(1.75);
         }
 
         private void Refill_Clicked(object sender, RoutedEventArgs e)

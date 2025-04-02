@@ -24,7 +24,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <StackPanel Background="Blue" Grid.ColumnSpan="5">
+        <StackPanel Background="Lavender" Grid.ColumnSpan="5">
             <TextBlock Style="{StaticResource TitleBlock}">Ania's Pizza</TextBlock>
         </StackPanel>
 
@@ -38,7 +38,7 @@
                         <StackPanel DockPanel.Dock="Right">
                             <TextBlock Style="{StaticResource CustomerLabel}" Text="{Binding Information.Name}"/>
                             <TextBlock Style="{StaticResource CustomerLabel}" Text="{Binding Information.Price, StringFormat=${0:0.00}}"/>
-                            <TextBlock Foreground="Bisque" Text="Out of stock!" Visibility="{Binding OutOfStockMessage}"/>
+                            <TextBlock Foreground="Red" Text="Out of stock!" Visibility="{Binding OutOfStockMessage}"/>
                         </StackPanel>
                     </DockPanel>
                 </DataTemplate>
@@ -46,13 +46,14 @@
         </ListView>
 
         <Button Style="{StaticResource MoneyButton}" Grid.Row="5" Click="Insert25_Clicked">
+            
             $1.25
         </Button>
         <Button Style="{StaticResource MoneyButton}" Grid.Row="5" Grid.Column="1" Click="Insert50_Clicked">
-            $2.50
+            $1.50
         </Button>
         <Button Style="{StaticResource MoneyButton}" Grid.Row="5" Grid.Column="2" Click="Insert75_Clicked">
-            $3.75
+            $1.75
         </Button>
 
         <StackPanel Grid.Row="6" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5">
@@ -68,7 +69,7 @@
             <TextBlock Style="{StaticResource CustomerLabel}" Text="{Binding Bank.Change,  StringFormat=Change ${0:0.00}}" />
         </StackPanel>
 
-        <DockPanel Margin="5" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="3" Background="LawnGreen">
+        <DockPanel Margin="5" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="3" Background="FloralWhite">
             <TextBlock DockPanel.Dock="Bottom" Style="{StaticResource CustomerLabel}" Text="{Binding Bank.BankTotal, StringFormat=Earnings ${0:0.00}}"/>
             <TextBlock DockPanel.Dock="Top" FontSize="28" Style="{StaticResource CustomerLabel}" HorizontalAlignment="Center">Inventory</TextBlock>
             <StackPanel DockPanel.Dock="Bottom">
@@ -83,10 +84,23 @@
 
         <StackPanel Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="3" Background="Lavender">
             <TextBlock DockPanel.Dock="Top" FontSize="28" Style="{StaticResource CustomerLabel}" HorizontalAlignment="Center">Manager</TextBlock>
-            <Button Style="{StaticResource ManagerButton}" Click="Refill_Clicked" Foreground="Black">
+            <Button Style="{StaticResource ManagerButton}" Click="Refill_Clicked" Opacity="0.99">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF0A0000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Foreground>
                 Refill Supply
             </Button>
             <Button Style="{StaticResource ManagerButton}" Click="Empty_Clicked" Foreground="Black">
+                
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
                 Empty Supply
             </Button>
             <Button Style="{StaticResource ManagerButton}" Click="Withdraw_Clicked" Foreground="Black">

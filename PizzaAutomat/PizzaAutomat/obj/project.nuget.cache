@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oqFvGtyEaRhFphkkV2Gx9vkUD8fL+QqeYQBCrLBF7tyulV9bpjQG1a1lUlztQuVrGprKaMcmB9oKm055KFM8BA==",
+  "success": true,
+  "projectFilePath": "D:\\WPF\\pizza_automat_WPF\\PizzaAutomat\\PizzaAutomat\\PizzaAutomat.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
