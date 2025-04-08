@@ -16,16 +16,14 @@ using PizzaAutomat.ViewModels;
 
 namespace PizzaAutomat
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        private MachineViewModel _machine = new MachineViewModel();
+        public MachineViewModel _machine { get; private set; }
 
         public MainWindow()
         {
             InitializeComponent();
+            _machine = new MachineViewModel();
             DataContext = _machine;
         }
 
@@ -50,19 +48,31 @@ namespace PizzaAutomat
             _machine.InsertChange(1.75);
         }
 
-        private void Refill_Clicked(object sender, RoutedEventArgs e)
-        {
-            _machine.Refill();
-        }
+        //private void Refill_Clicked(object sender, RoutedEventArgs e)
+        //{
+        //    _machine.Refill();
+        //}
 
-        private void Empty_Clicked(object sender, RoutedEventArgs e)
-        {
-            _machine.Empty();
-        }
+        //private void Empty_Clicked(object sender, RoutedEventArgs e)
+        //{
+        //    _machine.Empty();
+        //}
 
-        private void Withdraw_Clicked(object sender, RoutedEventArgs e)
+        //private void Withdraw_Clicked(object sender, RoutedEventArgs e)
+        //{
+        //    _machine.CollectPayments();
+        //}
+        private void Login_Click(object sender, RoutedEventArgs e)
         {
-            _machine.CollectPayments();
+            if (UsernameBox.Text == "admin" && PasswordBox.Password == "1234abcd")
+            {
+                ManagerWindow manager = new ManagerWindow(_machine);
+                manager.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid credentials");
+            }
         }
     }
 }

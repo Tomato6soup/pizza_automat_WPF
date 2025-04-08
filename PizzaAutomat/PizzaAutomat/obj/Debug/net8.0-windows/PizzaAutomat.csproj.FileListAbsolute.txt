@@ -23,3 +23,5 @@ D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\refi
 D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\PizzaAutomat.pdb
 D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\PizzaAutomat.genruntimeconfig.cache
 D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\ref\PizzaAutomat.dll
+D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\ManagerWindow.g.cs
+D:\WPF\pizza_automat_WPF\PizzaAutomat\PizzaAutomat\obj\Debug\net8.0-windows\ManagerWindow.baml

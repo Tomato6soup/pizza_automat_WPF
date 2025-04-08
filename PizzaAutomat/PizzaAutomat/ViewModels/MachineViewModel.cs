@@ -1,15 +1,8 @@
 ﻿using PizzaAutomat.ViewModels;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-////TO do
-///dac earnings.json plik, aby zapisywalo zarobione pieniendze
-///dodać funkcje "zobaczyc historie zamowien" w history.json pliku dla admina, takze dac refill and empty supply dla admina(pliki z models)
-///
+using System.IO;
+using Newtonsoft.Json;
 
 namespace PizzaAutomat.ViewModels
 {
@@ -27,8 +20,8 @@ namespace PizzaAutomat.ViewModels
                 new ProductViewModel(2, "Margerhita", 6.50),
                 new ProductViewModel(3, "Hawai", 10.75),
                 new ProductViewModel(4, "Vege", 4.75),
-                new ProductViewModel(3, "Pierogi", 3.75),
-                new ProductViewModel(4, "Meat lover", 9.75),
+                new ProductViewModel(5, "Pierogi", 3.75),
+                new ProductViewModel(6, "Meat lover", 9.75),
             };
         }
 
@@ -42,36 +35,44 @@ namespace PizzaAutomat.ViewModels
                 if (requestedItem.Dispense())
                 {
                     Bank.Pay();
-                    Console.WriteLine("Enjoy your beverage!");
+                    LogOrder(requestedItem);
+                    Console.WriteLine("Enjoy your pizza!");
                 }
             }
         }
 
-        public void InsertChange(double value)
+        private void LogOrder(ProductViewModel item)
         {
-            Bank.Insert(value);
+            string path = "history.json";
+            var order = new
+            {
+                Time = DateTime.Now,
+                Product = item.Information.Name,
+                Price = item.Information.Price
+            };
+
+            List<object> orders = new();
+            if (File.Exists(path))
+            {
+                var json = File.ReadAllText(path);
+                orders = JsonConvert.DeserializeObject<List<object>>(json) ?? new();
+            }
+
+            orders.Add(order);
+            File.WriteAllText(path, JsonConvert.SerializeObject(orders, Formatting.Indented));
         }
 
-        public void CollectPayments()
-        {
-            Bank.Collect();
-        }
-
+        public void InsertChange(double value) => Bank.Insert(value);
+        public void CollectPayments() => Bank.Collect();
         public void Refill()
         {
-            foreach (var i in Items)
-            {
-                i.Refill();
-            }
+            foreach (var i in Items) i.Refill();
             Console.WriteLine("Machine has been refilled!");
         }
 
         public void Empty()
         {
-            foreach (var i in Items)
-            {
-                i.Empty();
-            }
+            foreach (var i in Items) i.Empty();
             Console.WriteLine("Machine has been cleared!");
         }
     }

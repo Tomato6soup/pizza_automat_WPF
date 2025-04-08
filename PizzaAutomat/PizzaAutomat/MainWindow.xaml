@@ -84,7 +84,7 @@
 
         <StackPanel Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="3" Background="Lavender">
             <TextBlock DockPanel.Dock="Top" FontSize="28" Style="{StaticResource CustomerLabel}" HorizontalAlignment="Center">Manager</TextBlock>
-            <Button Style="{StaticResource ManagerButton}" Click="Refill_Clicked" Opacity="0.99">
+            <!--<Button Style="{StaticResource ManagerButton}" Click="Refill_Clicked" Opacity="0.99">
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
@@ -105,7 +105,13 @@
             </Button>
             <Button Style="{StaticResource ManagerButton}" Click="Withdraw_Clicked" Foreground="Black">
                 Withdraw Payment
+            </Button>-->
+            <TextBox x:Name="UsernameBox" Text="Username" Margin="5"/>
+            <PasswordBox x:Name="PasswordBox" Margin="5"/>
+            <Button Style="{StaticResource ManagerButton}" Click="Login_Click" Foreground="Black">
+                Log in
             </Button>
         </StackPanel>
+       
     </Grid>
 </Window>

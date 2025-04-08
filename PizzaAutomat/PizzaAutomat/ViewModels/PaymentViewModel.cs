@@ -1,71 +1,40 @@
-﻿using System;
+﻿using PizzaAutomat.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace PizzaAutomat.ViewModels
 {
     public class PaymentViewModel : ObservableObject
     {
-        //Customer information
         private double _total;
         private double _inserted;
         private double _change;
-
-        //Machine information
         private double _bankTotal;
 
         public double Total
         {
-            get
-            {
-                return _total;
-            }
-            set
-            {
-                _total = value;
-                OnPropertyChanged("Total");
-            }
+            get => _total;
+            set { _total = value; OnPropertyChanged("Total"); }
         }
 
         public double Inserted
         {
-            get
-            {
-                return _inserted;
-            }
-            set
-            {
-                _inserted = value;
-                OnPropertyChanged("Inserted");
-            }
+            get => _inserted;
+            set { _inserted = value; OnPropertyChanged("Inserted"); }
         }
 
         public double Change
         {
-            get
-            {
-                return _change;
-            }
-            set
-            {
-                _change = value;
-                OnPropertyChanged("Change");
-            }
+            get => _change;
+            set { _change = value; OnPropertyChanged("Change"); }
         }
 
         public double BankTotal
         {
-            get
-            {
-                return _bankTotal;
-            }
-            set
-            {
-                _bankTotal = value;
-                OnPropertyChanged("BankTotal");
-            }
+            get => _bankTotal;
+            set { _bankTotal = value; OnPropertyChanged("BankTotal"); }
         }
 
         public PaymentViewModel()
@@ -76,31 +45,24 @@ namespace PizzaAutomat.ViewModels
             BankTotal = 0;
         }
 
-        //Insert monetary value
         public void Insert(double value)
         {
             Inserted += value;
         }
 
-        //Set the total the requested item costs
         public void SelectedPrice(double value)
         {
             Total = value;
         }
 
-        //Confirm the payment can be made
         public bool Confirm()
         {
-            if (Inserted >= Total)
-                return true;
-
-            return false;
+            return Inserted >= Total;
         }
 
-        //Finalize payment
         public void Pay()
         {
-            Change = Total - Inserted;
+            Change = Inserted - Total;
             BankTotal += Total;
             Inserted = 0;
             Total = 0;
@@ -108,9 +70,21 @@ namespace PizzaAutomat.ViewModels
 
         public void Collect()
         {
+            string filePath = "earnings.json";
+            var earningsData = new { Date = DateTime.Now, Earnings = BankTotal };
+
+            List<object> existing = new();
+            if (File.Exists(filePath))
+            {
+                var json = File.ReadAllText(filePath);
+                existing = JsonConvert.DeserializeObject<List<object>>(json) ?? new();
+            }
+
+            existing.Add(earningsData);
+            File.WriteAllText(filePath, JsonConvert.SerializeObject(existing, Formatting.Indented));
+
             Console.WriteLine("Collected Payments: $" + BankTotal);
             BankTotal = 0;
         }
-
     }
 }

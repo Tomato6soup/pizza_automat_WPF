@@ -1,0 +1,19 @@
+﻿<Window x:Class="PizzaAutomat.ManagerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PizzaAutomat"
+        mc:Ignorable="d"
+        Title="ManagerWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <Button Content="Refill Machine" Click="Refill_Click" Margin="5"/>
+            <Button Content="Empty Machine" Click="Empty_Click" Margin="5"/>
+            <Button Content="Withdraw Payment" Click="Withdraw_Click" Margin="5"/>
+            <Button Content="View Earnings" Click="ViewEarnings_Click" Margin="5"/>
+            <Button Content="View Order History" Click="ViewHistory_Click" Margin="5"/>
+            <TextBox x:Name="OutputBox" Height="200" Margin="5" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+        </StackPanel>
+    </Grid>
+</Window>
